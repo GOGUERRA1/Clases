@@ -1,160 +1,174 @@
-*{
+	
+body {
+    font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
+	background: #333;
 }
-#container-slider
-{
-    position: relative;
-    display: block;
-    width: 100%;
-}
-#slider {
-    position: relative;
-    display: block;
-    width: 100%;
-    height: 100vh;
-    min-height: 500px;
-}
-#slider li {
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-    position: absolute !important;
-    top: 0 !important;
-    left: 0 !important;
-    width: 100%;
-    height: 100%;
-    display: block;
-    -webkit-transition: opacity 1s;
-    -moz-transition: opacity 1s;
-    -ms-transition: opacity 1s;
-    -o-transition: opacity 1s;
-    transition: opacity 1s;
-    z-index: -1;
-    opacity: 0;
-}
-#container-slider .arrowPrev, #container-slider .arrowNext{
-    font-size: 30pt;
-    color: rgba(204, 204, 204, 0.65);
-    cursor: pointer;
-    position: absolute;
-    top: 50%;
-    left: 50px;
-    z-index: 2;
-}
-#container-slider .arrowNext {
-    left: initial;
-    right: 50px !important;
-}
-.content_slider{
-    padding: 15px 30px;
-    color: #FFF;
-    width: 100%;
-    height: 100%;
-}
-.content_slider div{
-    text-align: center;
-}
-.content_slider h2{
-    font-family: 'arial';
-    font-size: 30pt;
-    letter-spacing: 1px;
-    text-transform: uppercase;
-    margin-bottom: 20px;
-}
-.content_slider p {
-    font-size: 15pt;
-    font-family: 'arial';
-    color: #FFF;
-    margin-bottom: 20px;
-}
-#slider li .content_slider{
-    background: rgba(0, 0, 0, 0.50);
-    padding: 10px 125px;
-}
-.content_slider{
-    display: -webkit-flex;
-    display: -moz-flex;
-    display: -ms-flex;
-    display: -o-flex;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-.btnSlider{
-    color: #FFF;
-    font-size: 15pt;
-    font-family: 'arial';
-    letter-spacing: 1px;
-    padding: 10px 50px;
-    border: 1px solid #CCC;
-    background: rgba(37, 40, 80, 0.55);
-    border-radius: 31px;
-    text-decoration: none;
-    transition: .5s all;
-}
-.btnSlider:hover{
-    background: #111;
-    border: 1px solid #111;
-}
-.listslider {
-    position: absolute;
-    display: -webkit-flex;
-    display: -moz-flex;
-    display: -ms-flex;
-    display: -o-flex;
+
+header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    left: 50%;
-    bottom: 5%;
+    background-color: #333;
+    color: white;
+    padding: 10px 20px;
+}
+
+.logo {
+    font-size: 24px;
+}
+
+.menu {
     list-style: none;
-    z-index: 2;
-    transform: translateX(-50%);
+    display: flex;
+    gap: 20px;
 }
-.listslider li {
-    border-radius: 50%;
-    width: 10px;
-    height: 10px;
-    cursor: pointer;
-    margin: 0 5px;
+
+.menu li a {
+    text-decoration: none;
+    color: white;
 }
-.listslider li a {
-    background: #CCC;
-    border-radius: 50%;
-    width: 100%;
-    height: 100%;
+
+.dropdown {
+    position: relative;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #000;
+    min-width: 160px;
+    z-index: 1;
+}
+
+.dropdown:hover .dropdown-content {
     display: block;
 }
-.item-select-slid {
-    background: #FFF  !important;
+
+.dropdown-content a {
+    display: block;
+    padding: 10px;
+    color: white;
+    text-decoration: none;
+    border-bottom: 1px solid white;
 }
-@media screen and (max-width: 460px){
-	.content_slider h2 {
-	    font-size: 15pt !important;
-	}
-	.content_slider p {
-	    font-size: 12pt !important;
-	}
-	#container-slider .arrowPrev, #container-slider .arrowNext{
-		font-size: 20pt;
-	}
-	#container-slider .arrowPrev{
-		left: 15px;
-	}
-	#container-slider .arrowNext{
-		right: 15px !important;
-	}
-	#slider{
-		height: 400px;
-		min-height: 400px;
-	}
-	#slider li .content_slider{
-		padding: 10px 35px;
-	}
-	.btnSlider{
-		padding: 10px 30px;
-    	font-size: 10pt;
-	}
+
+.dropdown-content a:last-child {
+    border-bottom: none;
+}
+
+.hero img {
+    width: 100%;
+    height: auto;
+}
+
+.categories {
+    display: flex;
+    justify-content: space-around;
+    padding: 20px;
+	flex: 0 0 auto;
+}
+
+
+.category {
+    text-align: center;
+	width: 25%;
+	height: 300px;
+	margin:15px;
+}
+
+.category img {
+    width: 150px;
+    height: 150px;
+}
+	
+.btn1 { width: 25%
+}
+	
+	
+	
+.main-banner {
+    background-image: url(https://www.sector.sk/files/novinky/0/2023/5-27-11-4-26/diablo-ukazuje-svoj-pribeh-z-k-image-329.jpg) ;
+    background-position: center top;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 225px 0px;
+}
+	
+.features {
+    margin-top: -120px;
+}	
+
+/*.features .item {
+    padding: 35px;
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.15);
+    border-radius: 25px;
+    background-color: #fff;
+    text-align: center;
+	border: 6px solid #fff;
+	position: relative;
+}	
+	*/
+	
+ .features .item {
+    padding: 15px 25px;
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.15);
+    border-radius: 25px;
+    background-color: #fff;
+    text-align: center;
+    border: 6px solid #fff;
+    position: relative;
+    cursor: pointer;
+    display: inline-block;
+    transition: background-color 0.3s, transform 0.2s, box-shadow 0.2s;
+}
+
+ .features .item:hover {
+    background-color: #f5f5f5;
+    transform: scale(1.05);
+    box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.3);
+}
+
+ .features .item:active {
+    transform: scale(0.95);
+    box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.3);
+}	
+	
+	
+.container, .container-fluid, .container-lg, .container-md, .container-sm, .container-xl, .container-xxl {
+    --bs-gutter-x: 1.5rem;
+    --bs-gutter-y: 0;
+    width: 90%;
+    padding-right: calc(var(--bs-gutter-x) * .5);
+    padding-left: calc(var(--bs-gutter-x) * .5);
+    margin-right: auto;
+    margin-left: auto;
+}	
+	
+	
+	
+	
+.cattitle {
+    text-align: right;
+    position: absolute;
+    bottom: 20px;
+	left: 50%;
+    transform: translateX(-50%);
+    border-radius: 10px;
+    background-color: #008af8;
+    font-size: 17px;
+    text-transform: uppercase;
+    font-weight: 600;
+    color: #fff;
+    padding: 8px 15px 6px 15px;
+}	
+	
+	
+footer p {
+    text-align: center;
+    line-height: 90px;
+    color: #777;
+    font-size: 16px;
+    font-weight: 400;
 }
